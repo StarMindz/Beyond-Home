@@ -6,11 +6,16 @@ const NasaItem = ({
   id,
   title,
   description,
+  fullDescribe,
   image,
   date,
   creator,
 }) => {
   const [show, setShow] = useState(false);
+
+  const Back = () => {
+    setShow(false);
+  };
 
   const nasaItem = (
     <div id={id} className="nasaItem">
@@ -28,10 +33,11 @@ const NasaItem = ({
         <NasaPopUp
           id={id}
           title={title}
-          description={description}
+          description={fullDescribe}
           creator={creator}
           image={image}
           date={date}
+          back={Back}
         />
       </div>
     </div>
@@ -43,6 +49,7 @@ NasaItem.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
+  fullDescribe: PropTypes.string,
   image: PropTypes.string,
   date: PropTypes.string,
   creator: PropTypes.string,
@@ -55,6 +62,7 @@ NasaItem.defaultProps = {
   image: '',
   date: '',
   creator: '',
+  fullDescribe: '',
 };
 
 export default NasaItem;

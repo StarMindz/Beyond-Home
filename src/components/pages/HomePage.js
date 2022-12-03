@@ -23,6 +23,7 @@ const HomePage = () => {
                 id={nasa.id}
                 title={nasa.title}
                 description={nasa.description}
+                fullDescribe={nasa.fullDescribe}
                 image={nasa.image}
                 date={nasa.date}
                 creator={nasa.creator}
