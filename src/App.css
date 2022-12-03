@@ -21,7 +21,8 @@
   margin-right: 40px;
 }
 
-.home, .apodLink {
+.home,
+.apodLink {
   background-color: transparent;
   font-size: 20px;
   color: black;
