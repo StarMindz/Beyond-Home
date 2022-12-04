@@ -32,7 +32,7 @@ const NasaPopUp = ({
 };
 
 NasaPopUp.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
