@@ -7,7 +7,8 @@ import {
 } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import APOD from './components/pages/Apod';
-import HomePage from './components/pages/HomePage';
+import Library from './components/pages/Library';
+import HomePage from './components/pages/Hompage';
 import './App.css';
 import { fetchNASA } from './redux/library/librarySlice';
 import { fetchAPOD } from './redux/apod/apodSlice';
@@ -25,6 +26,7 @@ function App() {
       <NavBar />
       <Routes className="appContainer">
         <Route path="/" element={<HomePage />} />
+        <Route path="/library" element={<Library />} />
         <Route path="/apod" element={<APOD />} />
       </Routes>
     </Router>

@@ -8,10 +8,12 @@ const NasaItem = ({
   description,
   fullDescribe,
   image,
+  hdImage,
   date,
   creator,
 }) => {
   const [show, setShow] = useState(false);
+  const quotes = ' ...';
 
   const Back = () => {
     setShow(false);
@@ -24,6 +26,7 @@ const NasaItem = ({
       </h1>
       <p className="nasaDescription">
         { description }
+        { quotes }
       </p>
       <div className="controlDiv">
         <img className="nasaImage" src={image} alt="nasa" />
@@ -35,7 +38,7 @@ const NasaItem = ({
           title={title}
           description={fullDescribe}
           creator={creator}
-          image={image}
+          image={hdImage}
           date={date}
           back={Back}
         />
@@ -51,6 +54,7 @@ NasaItem.propTypes = {
   description: PropTypes.string,
   fullDescribe: PropTypes.string,
   image: PropTypes.string,
+  hdImage: PropTypes.string,
   date: PropTypes.string,
   creator: PropTypes.string,
 };
@@ -60,6 +64,7 @@ NasaItem.defaultProps = {
   title: '',
   description: '',
   image: '',
+  hdImage: '',
   date: '',
   creator: '',
   fullDescribe: '',

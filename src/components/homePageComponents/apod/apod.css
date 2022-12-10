@@ -1,0 +1,87 @@
+.photo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.apodBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.popUp {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 80%;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.apodHomeImage {
+  width: 450px;
+  height: 450px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow:1px 1px 3px 2px rgb(255, 255, 255);
+  margin: 10px;
+}
+
+.apodHomeHeader {
+  color: white;
+  background-color: transparent;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.controlHomeDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.apodHomeTitle {
+  color: white;
+  text-align: center;
+}
+
+.controlHomeDiv:hover+.subComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.apodHomeImage:hover {
+  opacity: 0.3;
+}
+
+.apodHomeDescription {
+  color: white;
+  background-color: transparent;
+  font-size: 24px;
+  margin-top: 40px;
+  padding: 30px;
+  text-align: center;
+}

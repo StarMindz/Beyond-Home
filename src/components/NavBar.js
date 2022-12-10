@@ -1,14 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import React from 'react';
+import companiesLogo from '../images/BEYOND.png';
 
 const NavBar = () => {
   const nav = (
     <div className="navBar">
       <div className="navBarHead">
-        <h1 className="companyName">Beyond Home</h1>
+        <img className="companyName" src={companiesLogo} alt="Companies Logo" />
       </div>
       <div className="navBarMenu">
-        <NavLink exact activeClassName="active" className="home" to="/">HOME</NavLink>
+        <NavLink exact activeClassName="active" className="homePage" to="/">HOME</NavLink>
+        <NavLink activeClassName="active" className="home" to="/library">LIBRARY</NavLink>
         <NavLink activeClassName="active" className="apodLink" to="/apod">APOD</NavLink>
       </div>
     </div>
