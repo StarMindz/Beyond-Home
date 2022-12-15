@@ -71,7 +71,6 @@
 
 
 <!-- LIVE DEMO -->
-<img src="./space1.PNG" alt="Project pic">
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
