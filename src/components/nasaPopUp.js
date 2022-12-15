@@ -11,7 +11,7 @@ const NasaPopUp = ({
   back,
 }) => {
   const popUp = (
-    <div id={id} className="popUp">
+    <div id={`${id}PopUp`}>
       <h1 className="popUpTitle">
         { title }
       </h1>

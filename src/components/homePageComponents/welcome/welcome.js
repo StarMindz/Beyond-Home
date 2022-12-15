@@ -8,8 +8,9 @@ const Welcome = () => {
       <video src={url} autoPlay loop muted />
       <div className="welcomeMessage">
         <div className="messageDiv">
-          <h1 className="welcomeHead">Welcome !</h1>
-          <p className="welcomeBody">Have fun exploring Beyond Home</p>
+          <h1 className="welcomeHead">Beyond Home</h1>
+          <h2 className="welcomeSubHead">A tour of the universe</h2>
+          <p className="welcomeBody">You are in! Are you ready to explore?</p>
         </div>
       </div>
     </div>

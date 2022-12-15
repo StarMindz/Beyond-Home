@@ -18,17 +18,19 @@ const Apod = () => {
   const dispatch = useDispatch();
 
   const [show, setShow] = useState(false);
+  const [nasa, setNasa] = useState({});
 
   const Back = () => {
     setShow(false);
   };
 
-  const setShowTrue = () => {
+  const setShowTrue = (nasa) => {
+    setNasa(nasa);
     setShow(true);
   };
 
   useEffect(() => {
-    setTimeout(() => dispatch(fetchAPOD()), 1000);
+    dispatch(fetchAPOD());
   }, [dispatch]);
 
   if (ApodInfo === 'loading') {
@@ -38,6 +40,12 @@ const Apod = () => {
   const apod = (
     <div className="apodBox">
       <h1 className="apodHomeHeader">Astronomy Collections from APOD</h1>
+      <p className="apodParagraph">
+        One of the most popular websites at NASA is the Astronomy Picture of the Day.
+        In fact, this website is one of the most popular websites across all federal agencies.
+        It has the popular appeal of a Justin Bieber video.
+        Below are some beautiful collections from APOD API
+      </p>
       <div className="photo-container">
         <Swiper
           effect="coverflow"
@@ -75,31 +83,32 @@ const Apod = () => {
         >
           {ApodInfo.map((nasa) => {
             const nasaJsx = (
-              <div>
+              <div key={nasa.id}>
                 <SwiperSlide>
                   <ApodItem
-                    id={nasa.id}
-                    title={nasa.title}
-                    description={nasa.description}
-                    image={nasa.image}
+                    ids={nasa.id}
+                    titles={nasa.title}
+                    descriptions={nasa.description}
+                    images={nasa.image}
+                    nasas={nasa}
                     set={setShowTrue}
                   />
                 </SwiperSlide>
-                <div className={show ? 'popUp' : 'noDisplay'}>
-                  <NasaPopUp
-                    id={nasa.id}
-                    title={nasa.title}
-                    description={nasa.Describe}
-                    creator={nasa.creator}
-                    image={nasa.hdImage}
-                    date={nasa.date}
-                    back={Back}
-                  />
-                </div>
               </div>
             );
             return nasaJsx;
           })}
+          <div className={show ? 'popUp' : 'noDisplay'}>
+            <NasaPopUp
+              id={nasa.id}
+              title={nasa.title}
+              description={nasa.Describe}
+              creator={nasa.creator}
+              image={nasa.hdImage}
+              date={nasa.date}
+              back={Back}
+            />
+          </div>
         </Swiper>
       </div>
     </div>

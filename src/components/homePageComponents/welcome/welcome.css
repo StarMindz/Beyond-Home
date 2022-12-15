@@ -1,10 +1,11 @@
 .welcome {
   width: 100%;
+  height: 100vh;
 }
 
 video {
   width: 100%;
-  height: 800px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -14,6 +15,7 @@ video {
   align-items: center;
   justify-content: center;
   position: absolute;
+  margin-top: 55px;
   top:0;
   background: rgb(0, 0, 0, 0.2);
   height: 100%;
@@ -21,19 +23,27 @@ video {
 }
 
 .welcomeHead {
-  font-size: 40px;
+  font-size: 45px;
   background-color: transparent;
   color: rgb(218, 217, 217);
+}
+
+.welcomeSubHead {
+  font-size: 28px;
+  background-color: transparent;
+  color: rgb(218, 217, 217);
+  margin-top: 10px;
 }
 
 .welcomeBody {
-  font-size: 30px;
+  font-size: 26px;
   background-color: transparent;
   color: rgb(218, 217, 217);
+  margin: 2px;
 }
 
 .messageDiv {
-  height: 150px;
+  height: auto;
   padding: 10px;
   width: 600px;
   border: 1px solid rgb(148, 146, 146);

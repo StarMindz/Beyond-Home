@@ -2,26 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ApodItem = ({
-  id,
-  title,
-  description,
-  image,
+  ids,
+  titles,
+  descriptions,
+  images,
+  nasas,
   set,
 }) => {
   const quotes = ' ...';
 
   const apodItem = (
-    <div id={`${id}Apod`} className="apodHomeItem">
+    <div id={ids} className="apodHomeItem">
       <div className="controlHomeDiv">
-        <img className="apodHomeImage" src={image} alt="astronomy of the day" />
+        <img className="apodHomeImage" src={images} alt="astronomy of the day" />
         <h1 className="apodHomeTitle">
-          { title }
+          { titles }
         </h1>
-        <button className="nasaButton" type="submit" onClick={() => set()}>Details</button>
+        <button className="nasaButton" type="submit" onClick={() => set(nasas)}>Details</button>
       </div>
       <div className="subComponent noDisplay">
         <p className="apodHomeDescription">
-          { description }
+          { descriptions }
           { quotes }
         </p>
       </div>
@@ -31,19 +32,21 @@ const ApodItem = ({
 };
 
 ApodItem.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
+  ids: PropTypes.string,
+  titles: PropTypes.string,
+  descriptions: PropTypes.string,
+  images: PropTypes.string,
+  nasas: PropTypes.string,
   set: PropTypes.func,
 };
 
 ApodItem.defaultProps = {
-  id: 0,
-  title: '',
-  description: '',
-  image: '',
+  ids: 0,
+  titles: '',
+  descriptions: '',
+  images: '',
   set: '',
+  nasas: '',
 };
 
 export default ApodItem;
