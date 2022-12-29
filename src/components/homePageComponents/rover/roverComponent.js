@@ -42,6 +42,8 @@ const RoverComponent = () => {
         grabCursor="true"
         loop="true"
         centeredSlides="true"
+        slidesPerView="auto"
+        loopedSlides={5}
         freeMode
         pagination={{
           clickable: true,
@@ -54,16 +56,10 @@ const RoverComponent = () => {
                 <div className="roverObject" id={rover.id}>
                   <img className="roverImage" src={rover.image} alt="Rover data" />
                   <div className="additionalInfo">
-                    <div>
-                      <div>{`Moon date:     ${rover.sol}`}</div>
-                      <div>{`Earth date:    ${rover.earth}`}</div>
-                    </div>
-                    <div>
-                      <div>{`Rover name:    ${rover.rover}`}</div>
-                      <div>{`Camera name:   ${rover.camera}`}</div>
-                    </div>
-                  </div>
-                  <div>
+                    <div>{`Moon date:     ${rover.sol}`}</div>
+                    <div>{`Earth date:    ${rover.earth}`}</div>
+                    <div>{`Rover name:    ${rover.rover}`}</div>
+                    <div>{`Camera name:   ${rover.camera}`}</div>
                     <div>{`Rover's Landing date:   ${rover.landing_date}`}</div>
                     <div>{`Rover's Launch date:   ${rover.launch_date}`}</div>
                     <div>{`Rover's Status:   ${rover.status}`}</div>
