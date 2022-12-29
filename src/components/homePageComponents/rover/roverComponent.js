@@ -38,7 +38,7 @@ const RoverComponent = () => {
     <div className="roverContainer">
       <Swiper
         className="roverSwiperContainer"
-        spaceBetween={10}
+        spaceBetween={50}
         grabCursor="true"
         loop="true"
         centeredSlides="true"
@@ -46,29 +46,11 @@ const RoverComponent = () => {
         pagination={{
           clickable: true,
         }}
-        breakpoints={{
-          0: {
-            spaceBetween: 10,
-            slidesPerView: 1,
-          },
-          680: {
-            spaceBetween: 10,
-            slidesPerView: 3,
-          },
-          1024: {
-            spaceBetween: 30,
-            slidesPerView: 4,
-          },
-          1300: {
-            spaceBetween: 15,
-            slidesPerView: 5,
-          },
-        }}
       >
         {roverInfo.map((rover) => {
           const roverJsx = (
             <div>
-              <SwiperSlide key={rover.id}>
+              <SwiperSlide key={rover.id} className="roverObjectContainer">
                 <div className="roverObject" id={rover.id}>
                   <img className="roverImage" src={rover.image} alt="Rover data" />
                   <div className="additionalInfo">
@@ -86,7 +68,7 @@ const RoverComponent = () => {
                     <div>{`Rover's Launch date:   ${rover.launch_date}`}</div>
                     <div>{`Rover's Status:   ${rover.status}`}</div>
                   </div>
-                  <button className="nasaButton" type="submit" onClick={() => setValue(rover)}>Details</button>
+                  <button className="roverButtonSecond" type="submit" onClick={() => setValue(rover)}>Details</button>
                 </div>
               </SwiperSlide>
             </div>
