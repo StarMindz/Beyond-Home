@@ -12,12 +12,14 @@ import HomePage from './components/pages/Hompage';
 import './App.css';
 import { fetchNASA } from './redux/library/librarySlice';
 import { fetchAPOD } from './redux/apod/apodSlice';
+import { fetchRover } from './redux/rover/roverSlice';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setTimeout(() => dispatch(fetchNASA()), 1000);
+    dispatch(fetchNASA());
+    fetchRover(['2015-05-30', 'mast']);
     dispatch(fetchAPOD());
   }, [dispatch]);
 

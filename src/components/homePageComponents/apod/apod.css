@@ -9,10 +9,12 @@
 
 .apodBox {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: transparent;
+  background-image: url('../../../images/galaxy.jpg');
 }
 
 .apodHomeImage {
@@ -45,11 +47,13 @@
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
+  background-color: transparent;
 }
 
 .apodHomeTitle {
   color: white;
   text-align: center;
+  background-color: transparent;
 }
 
 .controlHomeDiv:hover + .subComponent {
@@ -73,4 +77,29 @@
   margin-top: 40px;
   padding: 30px;
   text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: orange;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(231, 73, 16);
+}
+
+.Swipercontainer {
+  background-color: transparent;
+}
+
+.apodBoxBackground {
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.apodHomeItem, .swiper-pagination, .swiperSlideBackground {
+  background-color: transparent;
 }

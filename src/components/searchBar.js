@@ -15,7 +15,7 @@ const SearchBar = () => {
 
   const searchBar = (
     <div className="form">
-      <form onSubmit={submitForm}>
+      <form className="libraryForm" onSubmit={submitForm}>
         <input className="searchBar" type="text" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         <BsSearch className="searchIcon" onClick={submitForm} />
       </form>

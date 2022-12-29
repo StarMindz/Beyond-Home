@@ -15,7 +15,9 @@ const NasaPopUp = ({
       <h1 className="popUpTitle">
         { title }
       </h1>
-      <img className="popUpImage" src={image} alt="nasa" />
+      <div>
+        <img className="popUpImage" src={image} alt="nasa" />
+      </div>
       <p className="popUpDescription">
         { description }
       </p>

@@ -1,0 +1,80 @@
+.roverInput {
+  background-color: transparent;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.rover {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url('../../../images/mars.jpg');
+  min-height: 100vh;
+}
+
+.roverForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255,255,255,0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border:  1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  font-size: 20px;
+}
+
+.dateInput, .cameraInput {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  gap: 20px;
+  background-color: transparent;
+}
+
+.roverButton {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(231, 73, 16, 0.8);
+  border: 1px solid rgb(104, 96, 96);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.roverInputItem {
+  background-color: transparent;
+  color: rgb(253, 253, 253);
+  font-weight: bold;
+}
+
+.roverImage {
+  width: 250px;
+  height: 250px;
+}
+
+.roverContainer {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.roverSwiperContainer {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
