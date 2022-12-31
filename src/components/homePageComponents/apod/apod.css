@@ -104,6 +104,8 @@
   margin-bottom: 40px;
 }
 
-.apodHomeItem, .swiper-pagination, .swiperSlideBackground {
+.apodHomeItem,
+.swiper-pagination,
+.swiperSlideBackground {
   background-color: transparent;
 }
