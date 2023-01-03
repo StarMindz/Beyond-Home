@@ -120,3 +120,14 @@
 .additionalInfo {
   margin-top: 10px;
 }
+
+.empty {
+  margin-top: 80px;
+  font-weight: bolder;
+  color: black;
+  width: 100%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

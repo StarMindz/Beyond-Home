@@ -25,6 +25,14 @@ const RoverComponent = () => {
     return <Loading />;
   }
 
+  if (roverInfo.length === 0) {
+    return (
+      <div className="empty">
+        Nothing found
+      </div>
+    );
+  }
+
   const setValue = (rover) => {
     setShow(true);
     setRover(rover);
@@ -64,7 +72,7 @@ const RoverComponent = () => {
                     <div>{`Rover's Launch date:   ${rover.launch_date}`}</div>
                     <div>{`Rover's Status:   ${rover.status}`}</div>
                   </div>
-                  <button className="roverButtonSecond" type="submit" onClick={() => setValue(rover)}>Details</button>
+                  <button className="roverButtonSecond" type="submit" onClick={() => setValue(rover)}>Expand</button>
                 </div>
               </SwiperSlide>
             </div>

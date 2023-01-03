@@ -22,10 +22,8 @@ const NasaPopUp = ({
         { description }
       </p>
       <p className="credit">
-        <span>Image Created by</span>
-        <span>{ creator }</span>
-        <span>on</span>
-        <span>{ date }</span>
+        <span className="creditTerms">{ creator }</span>
+        <span className="creditTerms">{ date }</span>
       </p>
       <button type="submit" className="nasaSecondButton" onClick={() => back()}>Back</button>
     </div>
