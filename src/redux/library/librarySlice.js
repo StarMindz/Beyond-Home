@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const initialState = [];
 
-export const fetchNASA = createAsyncThunk('nasa/fetchNASA', () => axios.get('https://api.nasa.gov/planetary/apod?api_key=ZATlX0ze5X6Ft0QH6f8MHZKzRYQ4FimrToCE22G7&count=15')
+export const fetchNASA = createAsyncThunk('nasa/fetchNASA', () => axios.get('https://api.nasa.gov/planetary/apod?api_key=ZATlX0ze5X6Ft0QH6f8MHZKz`RYQ4FimrToCE22G7&count=15')
   .then((response) => response.data)
   .then((datas) => {
     const dataInfo = datas.map((data) => ({
