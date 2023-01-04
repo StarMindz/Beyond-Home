@@ -26,6 +26,7 @@ video {
   font-size: 45px;
   background-color: transparent;
   color: white;
+  text-align: center;
 }
 
 .welcomeSubHead {
@@ -33,6 +34,7 @@ video {
   background-color: transparent;
   color: white;
   margin-top: 10px;
+  text-align: center;
 }
 
 .welcomeBody {
@@ -40,6 +42,7 @@ video {
   background-color: transparent;
   color: white;
   margin: 2px;
+  text-align: center;
 }
 
 .messageDiv {
