@@ -9,8 +9,6 @@ const RoverInput = () => {
 
   const setValues = (element) => {
     element.preventDefault();
-    console.log(date);
-    console.log(camera);
     dispatch(fetchRover([date, camera]));
   };
 
