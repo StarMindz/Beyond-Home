@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchAPOD } from '../../../redux/apod/apodSlice';
+import { useSelector } from 'react-redux';
 import ApodItem from './apodItem';
 import Loading from '../../loading';
 import NasaPopUp from '../../nasaPopUp';
@@ -15,7 +14,6 @@ SwiperCore.use([Pagination, EffectCoverflow]);
 
 const Apod = () => {
   const ApodInfo = useSelector((store) => store.nasa);
-  const dispatch = useDispatch();
 
   const [show, setShow] = useState(false);
   const [nasa, setNasa] = useState({});
@@ -28,10 +26,6 @@ const Apod = () => {
     setNasa(nasa);
     setShow(true);
   };
-
-  useEffect(() => {
-    dispatch(fetchAPOD());
-  }, [dispatch]);
 
   if (ApodInfo === 'loading') {
     return <Loading />;
