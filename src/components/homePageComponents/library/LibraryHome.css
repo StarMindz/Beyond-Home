@@ -14,20 +14,20 @@
 }
 
 .libraryHomeImage {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
 }
 
 .libraryHomeHeader {
   color: white;
   margin-top: 100px;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
 }
 
 .libraryParagraph {
   color: white;
-  font-size: 25px;
+  font-size: 22px;
   margin-right: 30px;
   margin-left: 30px;
   text-align: center;
@@ -47,7 +47,7 @@
 }
 
 .swiperSlideBox {
-  width: 320px;
+  width: 300px;
   height: 520px;
   display: flex;
   flex-direction: column;
@@ -75,6 +75,30 @@
 }
 
 .libraryHomeTitle {
-  font-size: 30px;
+  font-size: 27px;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  .libraryHomeHeader {
+    margin-top: 100px;
+    font-size: 40px;
+  }
+
+  .libraryParagraph {
+    font-size: 25px;
+  }
+
+  .swiperSlideBox {
+    width: 320px;
+  }
+
+  .libraryHomeImage {
+    width: 300px;
+    height: 300px;
+  }
+
+  .libraryHomeTitle {
+    font-size: 30px;
+  }
 }

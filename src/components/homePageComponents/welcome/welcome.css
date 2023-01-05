@@ -23,14 +23,14 @@ video {
 }
 
 .welcomeHead {
-  font-size: 45px;
+  font-size: 40px;
   background-color: transparent;
   color: white;
   text-align: center;
 }
 
 .welcomeSubHead {
-  font-size: 28px;
+  font-size: 26px;
   background-color: transparent;
   color: white;
   margin-top: 10px;
@@ -38,7 +38,7 @@ video {
 }
 
 .welcomeBody {
-  font-size: 26px;
+  font-size: 22px;
   background-color: transparent;
   color: white;
   margin: 2px;
@@ -60,4 +60,18 @@ video {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border:  1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (min-width: 600px) {
+  .welcomeHead {
+    font-size: 45px;
+  }
+
+  .welcomeSubHead {
+    font-size: 28px;
+  }
+
+  .welcomeBody {
+    font-size: 26px;
+  }
 }

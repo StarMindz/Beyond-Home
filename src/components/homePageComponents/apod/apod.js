@@ -56,7 +56,7 @@ const Apod = () => {
               stretch: 25,
               depth: 250,
               modifier: 1,
-              slideShadows: false,
+              slideShadows: true,
             }}
             breakpoints={{
               700: {
