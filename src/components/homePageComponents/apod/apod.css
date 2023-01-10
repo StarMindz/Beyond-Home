@@ -75,9 +75,11 @@
 .apodHomeDescription {
   color: white;
   background-color: transparent;
-  font-size: 24px;
+  font-size: 18px;
   margin-top: 40px;
   padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   text-align: center;
 }
 
@@ -130,5 +132,9 @@
   .apodHomeTitle {
     font-size: 30px;
     width: 350px;
+  }
+
+  .apodHomeDescription {
+    font-size: 20px;
   }
 }
