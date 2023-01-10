@@ -17,8 +17,8 @@
 }
 
 .apodHomeImage {
-  width: 400px;
-  height: 400px;
+  width: 280px;
+  height: 280px;
   border-radius: 20px;
   position: relative;
   box-shadow: 1px 1px 3px 2px rgb(255, 255, 255);
@@ -53,8 +53,8 @@
   color: white;
   text-align: center;
   background-color: transparent;
-  font-size: 30px;
-  width: 350px;
+  font-size: 25px;
+  width: 270px;
 }
 
 .controlHomeDiv:hover + .subComponent {
@@ -67,8 +67,9 @@
   background-color: transparent;
 }
 
-.apodHomeImage:hover {
-  opacity: 0.3;
+.controlHomeDiv:hover .apodImageBackground {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
 }
 
 .apodHomeDescription {
@@ -118,5 +119,16 @@
 
   .apodParagraph {
     font-size: 25px;
+  }
+
+  .apodHomeImage {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+  }
+  
+  .apodHomeTitle {
+    font-size: 30px;
+    width: 350px;
   }
 }

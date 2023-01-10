@@ -136,7 +136,7 @@
 
 .nasaTitle {
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .nasaDescription {
@@ -263,7 +263,7 @@
 .apodImage {
   box-shadow: 1px 1px 5px 3px rgb(255, 165, 132);
   margin-bottom: 70px;
-  width: 80%;
+  width: 90%;
 }
 
 .apodDescription {
@@ -282,8 +282,8 @@
   align-items: center;
   top: 50%;
   left: 50%;
-  width: 70%;
-  height: 80%;
+  width: 80%;
+  height: 60%;
   padding-left: 5px;
   padding-right: 5px;
   z-index: 10;
@@ -360,10 +360,6 @@
     font-size: 55px;
   }
 
-  .apodDate {
-    font-size: 25px;
-  }
-  
   .apodTitle {
     font-size: 28px;
   }
@@ -420,6 +416,8 @@
   .popUp {
     padding-left: 20px;
     padding-right: 20px;
+    width: 70%;
+    height: 80%;
   }
 
   .credit {

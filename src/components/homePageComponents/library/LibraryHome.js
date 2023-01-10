@@ -1,21 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
 import NasaPopUp from '../../nasaPopUp';
-import { fetchSearch } from '../../../redux/library/librarySlice';
 import Loading from '../../loading';
 import './LibraryHome.css';
 
 SwiperCore.use([Pagination, EffectCoverflow]);
 
 const LibraryHome = () => {
-  const LibraryInfo = useSelector((store) => store.nasa);
-  const dispatch = useDispatch();
+  const LibraryInfo = useSelector((store) => store.home);
 
   const [show, setShow] = useState(false);
   const [library, setLibrary] = useState({});
-
   const Back = () => {
     setShow(false);
   };
@@ -24,10 +21,6 @@ const LibraryHome = () => {
     setLibrary(library);
     setShow(true);
   };
-
-  useEffect(() => {
-    dispatch(fetchSearch(''));
-  }, [dispatch]);
 
   if (LibraryInfo === 'loading') {
     return <Loading />;

@@ -9,7 +9,6 @@ const SearchBar = () => {
 
   const submitForm = (element) => {
     element.preventDefault();
-    setSearchTerm('');
     dispatch(fetchSearch(searchTerm));
   };
 

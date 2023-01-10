@@ -19,19 +19,19 @@ export const fetchNASA = createAsyncThunk('nasa/fetchNASA', () => axios.get('htt
     return dataInfo;
   }));
 
-export const fetchSearch = createAsyncThunk('nasa/fetch', (searchTerm) => axios.get(`https://images-api.nasa.gov/search?q=${searchTerm}`)
+export const fetchSearch = createAsyncThunk('nasa/fetch', (searchTerm) => axios.get(`https://images-api.nasa.gov/search?q=${searchTerm}&page=1`)
   .then((response) => response.data)
-  .then((data) => data.collection.items)
+  .then((data) => data.collection.items.slice(1, 20))
   .then((datas) => {
     const dataInfo = datas.map((data) => ({
       id: data.data[0].nasa_id,
       title: data.data[0].title,
-      description: data.data[0].description_508.split(' ').slice(0, 24).join(' '),
+      description: data.data[0].description.split(' ').slice(0, 24).join(' '),
       fullDescribe: data.data[0].description,
       image: data.links[0].href,
       hdImage: data.links[0].href,
       date: data.data[0].date_created,
-      creator: data.data[0].secondary_creator,
+      creator: (data.data[0].photographer) ? data.data[0].photographer : 'Unknown',
     }));
     return dataInfo;
   }));
@@ -44,6 +44,7 @@ const nasaSlice = createSlice({
     builder.addCase(fetchNASA.pending, () => 'loading');
     builder.addCase(fetchSearch.fulfilled, (state, action) => action.payload);
     builder.addCase(fetchSearch.pending, () => 'loading');
+    builder.addCase(fetchSearch.rejected, () => 'Bad error');
   },
 });
 

@@ -9,12 +9,21 @@ const LibraryComponent = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setTimeout(() => dispatch(fetchNASA()), 1000);
+    dispatch(fetchNASA());
   }, [dispatch]);
 
   if (nasaInfo === 'loading') {
     return <Loading />;
   }
+  if (nasaInfo.length === 0 || !nasaInfo) {
+    return (
+      <div className="empty">
+        Nothing found
+      </div>
+    );
+  }
+
+  if (nasaInfo === 'Bad error') { return ('Bad Error'); }
 
   const home = (
     <div className="nasaContainer">

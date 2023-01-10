@@ -14,7 +14,9 @@ const ApodItem = ({
   const apodItem = (
     <div id={ids} className="apodHomeItem">
       <div className="controlHomeDiv">
-        <img className="apodHomeImage" src={images} alt="astronomy of the day" />
+        <div className="apodImageBackground">
+          <img className="apodHomeImage" src={images} alt="astronomy of the day" />
+        </div>
         <h1 className="apodHomeTitle">
           { titles }
         </h1>
