@@ -76,11 +76,10 @@
 
 >Link to live Demo 
 
-- [Click here to explore](https://beyond-home.netlify.app) 
-
+- [Click here to explore](https://beyondhome.netlify.app)
 >Link to Video Demo
 
-- [Watch Now](https://www.loom.com/share/f65a863a72424ca3b1e28601dc209451) 
+- [Watch Now](https://www.loom.com/share/c9aa04d533484b8e8289be615a4bce82) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
