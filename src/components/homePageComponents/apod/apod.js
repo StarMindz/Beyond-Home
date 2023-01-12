@@ -84,7 +84,6 @@ const Apod = () => {
                     <ApodItem
                       ids={nasa.id}
                       titles={nasa.title}
-                      descriptions={nasa.description}
                       images={nasa.image}
                       nasas={nasa}
                       set={setShowTrue}
