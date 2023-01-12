@@ -8,7 +8,6 @@ const ApodItem = ({
   nasas,
   set,
 }) => {
-
   const apodItem = (
     <div id={ids} className="apodHomeItem">
       <div className="controlHomeDiv">
