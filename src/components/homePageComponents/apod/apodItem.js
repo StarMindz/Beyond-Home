@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 const ApodItem = ({
   ids,
   titles,
-  descriptions,
   images,
   nasas,
   set,
 }) => {
-  const quotes = ' ...';
 
   const apodItem = (
     <div id={ids} className="apodHomeItem">
@@ -30,7 +28,6 @@ const ApodItem = ({
 ApodItem.propTypes = {
   ids: PropTypes.string,
   titles: PropTypes.string,
-  descriptions: PropTypes.string,
   images: PropTypes.string,
   nasas: PropTypes.string,
   set: PropTypes.func,
@@ -39,7 +36,6 @@ ApodItem.propTypes = {
 ApodItem.defaultProps = {
   ids: 0,
   titles: '',
-  descriptions: '',
   images: '',
   set: '',
   nasas: '',
