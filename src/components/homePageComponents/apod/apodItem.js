@@ -22,12 +22,6 @@ const ApodItem = ({
         </h1>
         <button className="nasaButton" type="submit" onClick={() => set(nasas)}>Details</button>
       </div>
-      <div className="subComponent noDisplay">
-        <p className="apodHomeDescription">
-          { descriptions }
-          { quotes }
-        </p>
-      </div>
     </div>
   );
   return apodItem;
