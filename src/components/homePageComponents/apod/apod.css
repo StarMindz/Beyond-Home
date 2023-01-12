@@ -1,0 +1,140 @@
+.photo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.apodBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  background-image: url('../../../images/galaxy.jpg');
+}
+
+.apodHomeImage {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 1px 1px 3px 2px rgb(255, 255, 255);
+  margin: 10px;
+}
+
+.apodHomeHeader {
+  color: white;
+  margin-top: 100px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.apodParagraph {
+  color: white;
+  font-size: 22px;
+  margin-right: 30px;
+  margin-left: 30px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.controlHomeDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.apodHomeTitle {
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  font-size: 25px;
+  width: 270px;
+}
+
+.controlHomeDiv:hover + .subComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.controlHomeDiv:hover .apodImageBackground {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+
+.apodHomeDescription {
+  color: white;
+  background-color: transparent;
+  font-size: 18px;
+  margin-top: 40px;
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: orange;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(231, 73, 16);
+}
+
+.Swipercontainer {
+  background-color: transparent;
+}
+
+.apodBoxBackground {
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.apodHomeItem {
+  margin-bottom: 40px;
+}
+
+.apodHomeItem,
+.swiper-pagination,
+.swiperSlideBackground {
+  background-color: transparent;
+}
+
+@media (min-width: 600px) {
+  .apodHomeHeader {
+    font-size: 40px;
+  }
+
+  .apodParagraph {
+    font-size: 25px;
+  }
+
+  .apodHomeImage {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+  }
+  
+  .apodHomeTitle {
+    font-size: 30px;
+    width: 350px;
+  }
+
+  .apodHomeDescription {
+    font-size: 20px;
+  }
+}

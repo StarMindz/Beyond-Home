@@ -1,27 +1,81 @@
 * {
-  background-color: #12100e;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .navBar {
-  background-color: rgb(128, 128, 128, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
+  height: 50px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .navBarMenu {
+  position: fixed;
+  background-color: rgba(255, 255, 255);
+  left: -100%;
+  top: 0;
+  width: 100%;
+  gap: 20px;
+  padding-top: 50px;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 200px;
-  background-color: transparent;
-  margin-right: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.3s;
+  z-index: 2;
 }
 
-.home, .apodLink {
+.horizontal {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navBarMenu.active {
+  left: 0;
+  padding-left: 50px;
+}
+
+.hamburger.active {
+  position: fixed;
+  left: 80%;
+}
+
+.hamburger {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 25px;
+  background-color: gray;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 20px;
+  z-index: 2;
+  transition: 1s;
+}
+
+.hamburger.active .horizontal:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .horizontal:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .horizontal:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.home,
+.homePage,
+.apodLink {
   background-color: transparent;
   font-size: 20px;
   color: black;
@@ -35,31 +89,37 @@
 }
 
 .companyName {
+  height: 50px;
+  width: 210px;
   background-color: transparent;
-  margin-left: 40px;
 }
 
 .nasaItem {
-  width: 400px;
+  width: 300px;
   height: 720px;
   display: flex;
   flex-direction: column;
-  color: rgb(184, 184, 184);
+  color: white;
   align-items: center;
   padding: 20px;
-  margin: 30px;
   border-radius: 20px;
   border: 1px solid grey;
-  box-shadow: 1px 2px 2px 2px rgb(252, 250, 250);
+  background-color: rgb(18, 16, 14, 0.7);
+  box-shadow: inset -3px -3px 5px #ffffff73, inset 3px 3px 3px rgba(94, 104, 121, 0.288);
   overflow-y: auto;
+  margin-bottom: 30px;
 }
 
 .nasaImage {
-  max-width: 300px;
-  max-height: 300px;
+  width: 250px;
+  height: 250px;
   margin: 20px;
   border: 1px solid grey;
   border-radius: 10px;
+}
+
+.creditTerms {
+  color: white;
 }
 
 .nasaContainer {
@@ -67,6 +127,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-size: contain;
 }
 
 .noDisplay {
@@ -75,6 +136,7 @@
 
 .nasaTitle {
   text-align: center;
+  font-size: 30px;
 }
 
 .nasaDescription {
@@ -82,10 +144,15 @@
   font-size: 20px;
 }
 
-.homeContainer {
+.libraryContainer {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
+  background-image: url('./images/earth3.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: black;
 }
 
 .nasaButton {
@@ -94,8 +161,11 @@
   background-color: rgb(231, 73, 16);
   border-color: transparent;
   border-radius: 30px;
+  color: white;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .controlDiv {
@@ -110,8 +180,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  justify-content: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 40px;
+}
+
+.libraryForm {
+  height: 60px;
+  width: 330px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .searchBar {
@@ -122,10 +207,33 @@
   padding-left: 20px;
   font-size: 20px;
   color: rgb(15, 13, 13);
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.searchIcon {
+  margin-right: 20px;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px solid rgb(94, 91, 91);
+  padding: 10px;
   cursor: pointer;
 }
 
+.apodMainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  background-image: url(./images/stars.jpg);
+  background-size: contain;
+}
+
 .apodContainer {
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,28 +242,186 @@
 .apodHeading {
   color: white;
   margin: 50px;
-  font-size: 55px;
+  font-size: 45px;
+  background-color: transparent;
+  text-align: center;
 }
 
 .apodDate {
   color: rgb(252, 71, 6);
-  font-size: 25px;
+  font-size: 22px;
+  align-items: center;
 }
 
 .apodTitle {
   color: rgb(218, 208, 208);
-  font-size: 25px;
+  font-size: 28px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .apodImage {
   box-shadow: 1px 1px 5px 3px rgb(255, 165, 132);
   margin-bottom: 70px;
+  width: 90%;
 }
 
 .apodDescription {
   width: 80%;
   color: white;
-  font-size: 22px;
-  margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 50px;
+  background-color: transparent;
+}
+
+.popUp {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  height: 85%;
+  padding-left: 5px;
+  padding-right: 5px;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  background-color: #12100e;
+  overflow-y: auto;
+  box-shadow: -3px -5px 9px #ffffff73, 5px 5px 9px rgba(94, 104, 121, 0.288);
+}
+
+.popUpImage {
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.popUpTitle {
+  font-size: 25px;
+  margin-top: 50px;
+  color: white;
+}
+
+.popUpDescription {
+  font-size: 18px;
+  width: 70%;
+  color: white;
+}
+
+.credit {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.nasaSecondButton {
+  width: 200px;
+  min-height: 60px;
+  background-color: rgb(231, 73, 16);
+  border-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-top: 60px;
+}
+
+@media (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navBarMenu {
+    position: static;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-right: 40px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .companyName {
+    margin-left: 20px;
+  }
+
+  .apodHeading {
+    font-size: 55px;
+  }
+
+  .apodTitle {
+    font-size: 28px;
+  }
+  
+  .apodImage {
+    width: 60%;
+  }
+
+  .apodDescription {
+    font-size: 25px;
+  }
+
+  .nasaItem {
+    width: 370px;
+    height: 740px;
+    margin: 30px;
+  }
+
+  .libraryForm {
+    height: 60px;
+    width: 370px;
+  }
+
+  .nasaImage {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+  }
+
+  .nasaTitle {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .popUpImage {
+    width: 500px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+  }
+
+  .popUpTitle {
+    font-size: 40px;
+    margin-top: 50px;
+    color: white;
+  }
+
+  .popUpDescription {
+    font-size: 22px;
+    width: 70%;
+    color: white;
+  }
+
+  .popUp {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+    height: 80%;
+  }
+
+  .credit {
+    margin-top: 40px;
+    font-size: 20px;
+  }
 }
